@@ -9,12 +9,6 @@ def no_build_year(x):
     return x
 
 
-def empty_to_Null(self, x):
-    if x is "":
-        x = "Null"
-    return x
-
-
 def no_price_available(x):
     # Some prices are only available when asked
     if '.' not in x:
