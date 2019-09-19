@@ -6,12 +6,13 @@ def no_build_year(x):
     # In some cases the build year is given in '-' if unknown
     if x is '-':
         x = None
-        return x
+    return x
 
 
 def empty_to_Null(self, x):
     if x is "":
         x = "Null"
+    return x
 
 
 def no_price_available(x):
@@ -25,4 +26,4 @@ def convert_to_int(x):
     # If a string consists only of numbers they are converted to an int
     if x.isdigit():
         x = int(x)
-        return x
+    return x

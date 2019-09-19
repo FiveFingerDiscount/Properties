@@ -30,4 +30,3 @@ class PropertiesItem(scrapy.Item):
     spider = scrapy.Field()
     server = scrapy.Field()
     date = scrapy.Field()
-    pass

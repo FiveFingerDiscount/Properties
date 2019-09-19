@@ -3,9 +3,9 @@ import scrapy
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import MapCompose
 from properties.items import PropertiesItem
-from properties.helperfuntions import (no_build_year,
-                                       no_price_available,
-                                       convert_to_int)
+from properties.helper_functions import (no_build_year,
+                                         no_price_available,
+                                         convert_to_int)
 
 
 class BasicSpider(scrapy.Spider):
@@ -19,7 +19,7 @@ class BasicSpider(scrapy.Spider):
         l = ItemLoader(item=PropertiesItem(),
                        response=response)
         l.add_xpath('build', '//tbody/tr[@id]/td[3]/text()',
-                    #no_build_year,
+                    # no_build_year,
                     )
         l.add_xpath('city', '//tbody/tr[@id]/td/text()[following-sibling::br]',
                     MapCompose(lambda i: i[9:])
