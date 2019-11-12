@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy.loader import ItemLoader
-from scrapy.loader.processors import MapCompose
 from properties.items import PropertiesItem
 
 
 class BasicSpider(scrapy.Spider):
-    name = 'manual'
+    name = 'huizenzoeker'
     allowed_domains = ['www.huizenzoeker.nl']
     start_urls = ['https://www.huizenzoeker.nl/koop/overijssel/zwolle/1/',
                   ]

@@ -9,7 +9,8 @@ import scrapy
 from scrapy.loader.processors import MapCompose, TakeFirst
 from properties.helper_functions import (no_build_year,
                                          no_price_available,
-                                         convert_to_int)
+                                         convert_to_int,
+                                         )
 
 
 class PropertiesItem(scrapy.Item):
@@ -48,7 +49,7 @@ class PropertiesItem(scrapy.Item):
         output_processor=TakeFirst()
     )
     street = scrapy.Field()
-
+    
     # # Calculated fields
     # images = scrapy.Field()
     # location = scrapy.Field()

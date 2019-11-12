@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
-# Helper functions for transforming scraped data to usefull format
+"""
+Created on Wed Oct 30 13:57:34 2019
+Helper functions for transforming scraped data to usefull format.
+@author: LindenMa01
+"""
+from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut
 
 
 def no_build_year(x):
