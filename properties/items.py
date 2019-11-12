@@ -17,7 +17,9 @@ class PropertiesItem(scrapy.Item):
     # define the fields for your item here like:
     # Primary fields
     build = scrapy.Field(
-        input_processor=MapCompose(no_build_year),
+        input_processor=MapCompose(no_build_year,
+                                   convert_to_int
+                                   ),
         output_processor=TakeFirst()
     )
     city = scrapy.Field(
